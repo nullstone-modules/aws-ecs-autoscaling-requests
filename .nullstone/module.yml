@@ -1,0 +1,14 @@
+org_name: nullstone
+name: aws-ecs-autoscaling-requests
+friendly_name: Requests Autoscaling for ECS/Fargate
+description: This creates an auto-scaling configuration for ECS/Fargate apps that scales in/out based on load balancer requests.
+category: capability
+subcategory: events
+provider_types:
+    - aws
+platform: ecs
+subplatform: '*'
+type: ""
+appCategories:
+    - container
+is_public: true
