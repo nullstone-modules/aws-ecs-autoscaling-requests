@@ -35,5 +35,5 @@ data "ns_app_connection" "cluster" {
 }
 
 locals {
-  cluster_id   = data.ns_app_connection.cluster.outputs.cluster_name
+  cluster_id = data.ns_app_connection.cluster.outputs.cluster_name
 }

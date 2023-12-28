@@ -9,15 +9,27 @@ EOF
 }
 
 variable "scale_down_threshold" {
-  default = 10
-  type = number
-  description = "The autoscaling policy will cause a scale down when the average number of requests per container per minute drops below this amount."
+  default     = 10
+  type        = number
+  description = "The autoscaling policy will cause a scale down when the average number of requests per container per scale_down_period drops below this amount."
+}
+
+variable "scale_down_period" {
+  default     = 60
+  type        = number
+  description = "The autoscaling policy measures the number of requests within this amount (for scaling down)."
 }
 
 variable "scale_up_threshold" {
   default     = 100
   type        = number
   description = "The autoscaling policy will cause a scale up when the average number of requests per container per minute exceeds this amount."
+}
+
+variable "scale_up_period" {
+  default     = 60
+  type        = number
+  description = "The autoscaling policy measures the number of requests within this amount (for scaling up)."
 }
 
 variable "scale_cooldown" {
