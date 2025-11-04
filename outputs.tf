@@ -30,3 +30,11 @@ output "metric_alarms" {
     }
   ]
 }
+
+output "auto_scaling" {
+  value = [
+    {
+      enabled = true
+    }
+  ]
+}
